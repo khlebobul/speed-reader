@@ -1,0 +1,19 @@
+{
+  "name": "speed-reader-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "npm dependencies for Speed Reader macOS app",
+  "scripts": {
+    "build:defuddle": "esbuild node_modules/defuddle/dist/index.js --bundle --format=iife --global-name=Defuddle --outfile=SpeedReader/SpeedReader/Reader/Defuddle.js --minify",
+    "build:pdf2md": "esbuild pdf2md-bundle.js --bundle --format=iife --global-name=PDF2MD --outfile=SpeedReader/SpeedReader/Reader/PDF2MD.js --minify --loader:.jsx=jsx --jsx=transform",
+    "postinstall": "npm run build:defuddle && npm run build:pdf2md"
+  },
+  "dependencies": {
+    "defuddle": "^0.19.2",
+    "pdf-to-markdown": "github:jzillmann/pdf-to-markdown",
+    "pdfjs-dist": "^3.11.174"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.1"
+  }
+}

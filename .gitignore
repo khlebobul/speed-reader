@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode build
+SpeedReader/.build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcuserdatad/
+
+# Distribution
+dist/
+
+# Xcode local settings
+*.xcworkspace/xcuserdata/x
+
+# Node
+node_modules/
+
+# Secrets
+SpeedReader/Secrets.xcconfig

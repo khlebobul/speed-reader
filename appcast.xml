@@ -1,0 +1,9 @@
+<?xml version="1.0" standalone="yes"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>Speed Reader</title>
+    <link>https://github.com/khlebobul/speed-reader</link>
+    <description>Speed Reader release feed</description>
+    <language>en</language>
+  </channel>
+</rss>

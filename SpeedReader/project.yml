@@ -1,0 +1,53 @@
+name: SpeedReader
+options:
+  bundleIdPrefix: com.glebshalimov
+  deploymentTarget:
+    macOS: "14.0"
+  xcodeVersion: "26.0"
+
+configFiles:
+  Debug: Config.xcconfig
+  Release: Config.xcconfig
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+
+schemes:
+  SpeedReader:
+    build:
+      targets:
+        SpeedReader: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+    archive:
+      config: Release
+
+packages:
+  Sparkle:
+    url: https://github.com/sparkle-project/Sparkle
+    version: "2.7.0"
+
+targets:
+  SpeedReader:
+    type: application
+    platform: macOS
+    sources:
+      - SpeedReader
+    dependencies:
+      - package: Sparkle
+    settings:
+      base:
+        INFOPLIST_FILE: SpeedReader/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.glebshalimov.speedreader
+        PRODUCT_NAME: Speed Reader
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: "G4KB5U6326"
+        ENABLE_HARDENED_RUNTIME: YES
+        COMBINE_HIDPI_IMAGES: YES
+        CODE_SIGN_ENTITLEMENTS: SpeedReader/SpeedReader.entitlements
+        ENABLE_DEBUG_DYLIB: NO
