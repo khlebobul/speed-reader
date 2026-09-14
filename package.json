@@ -9,7 +9,7 @@
     "postinstall": "npm run build:defuddle && npm run build:pdf2md"
   },
   "dependencies": {
-    "defuddle": "^0.19.2",
+    "defuddle": "^0.19.3",
     "pdf-to-markdown": "github:jzillmann/pdf-to-markdown",
     "pdfjs-dist": "^3.11.174"
   },
